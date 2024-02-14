@@ -1,4 +1,3 @@
-import heartBackground from '../assets/spark.jpg';
 import { GifIcon, GiftIcon, HeartIcon } from '@heroicons/react/24/outline';
 
 const App = () => {
