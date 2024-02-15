@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Gift from './components/Gift';
 import Home from './components/Home';
 import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';

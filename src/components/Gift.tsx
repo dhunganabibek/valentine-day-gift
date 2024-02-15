@@ -3,12 +3,13 @@ import { Fragment } from 'react';
 import GiftImage from '../../assets/gift.png';
 
 type UseState<T> = [T, (val: T) => void];
+
 export default function MyModal({ state }: { state: UseState<Boolean> }) {
   const [isOpen, setIsOpen] = state;
 
   return (
     <>
-      <Transition appear show={isOpen} as={Fragment}>
+      <Transition appear show={isOpen}>
         <Dialog
           as='div'
           className='relative z-10'
@@ -50,8 +51,15 @@ export default function MyModal({ state }: { state: UseState<Boolean> }) {
 
                   <div className='pt-8 flex justify-center'>
                     <button
+                      style={{
+                        animationDuration: '2s',
+                        animationName: 'slide-in',
+                        animationIterationCount: 'infinite',
+                        animationDirection: 'normal',
+                        animationTimingFunction: 'linear',
+                      }}
                       type='button'
-                      className='flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-2xl font-medium text-blue-900 animate-bounce'
+                      className='flex justify-center rounded-md border bg-blue-100 px-4 py-2 text-2xl text-blue-900'
                       onClick={() => setIsOpen(false)}
                     >
                       Close !!
