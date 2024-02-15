@@ -4,7 +4,7 @@ import Gift from './Gift';
 import { useState } from 'react';
 
 const Home = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <div className='bg-center bg-cover min-h-screen font-patrick-hand backdrop-opacity-20 bg-gradient-to-b from-pink-400 to-purple-600 flex relative'>
